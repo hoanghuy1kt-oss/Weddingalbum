@@ -71,6 +71,34 @@
         .floral-bg {
             background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
         }
+
+        /* Hiệu ứng hạt bụi trái tim */
+        .heart-particle {
+            position: fixed;
+            bottom: -10vh;
+            color: #b8956e;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 50;
+            animation: floatUp 10s linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) scale(0.5) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.8;
+            }
+            90% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-110vh) scale(1.5) rotate(360deg);
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 
@@ -78,9 +106,9 @@
 
     <!-- Phần Hero (Khu vực hình ảnh trên cùng) -->
     <header class="relative h-[60vh] md:h-[75vh] w-full flex items-center justify-center overflow-hidden">
-        <!-- Hình nền (Sử dụng ảnh placeholder lãng mạn) -->
+        <!-- Hình nền -->
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+            <img src="./_HI_0210.jpg"
                 alt="Wedding Background" class="w-full h-full object-cover object-center" />
             <!-- Lớp phủ tối mờ để chữ nổi bật -->
             <div class="absolute inset-0 bg-black/40"></div>
@@ -157,6 +185,9 @@
                     <i class="fa-solid fa-arrow-right relative z-10 group-hover:translate-x-1 transition-transform"></i>
                 </a>
                 <p class="text-sm text-stone-400 mt-4 italic font-body">Nhấn vào nút bên trên để mở Google Photos</p>
+                <p class="text-[15px] font-medium text-wedding-gold mt-6 italic bg-wedding-gold/10 inline-block px-4 py-2 rounded-lg border border-wedding-gold/20 shadow-sm animate-pulse-slow">
+                    <i class="fa-solid fa-camera-retro mr-2"></i> Hình ảnh sẽ tiếp tục được cập nhật sau khi hậu kỳ hoàn tất
+                </p>
             </div>
 
         </div>
@@ -168,6 +199,46 @@
         <p>With Love, <br class="md:hidden" /> Huy Hoàng & Hoa Trần</p>
     </footer>
 
+    <!-- Script tạo hiệu ứng trái tim -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const createHeart = () => {
+                const heart = document.createElement('i');
+                heart.classList.add('fa-solid', 'fa-heart', 'heart-particle');
+                
+                // Randomize position, size, and animation duration
+                const startLeft = Math.random() * 100;
+                const size = Math.random() * 1.5 + 0.5; // 0.5rem to 2rem
+                const duration = Math.random() * 8 + 6; // 6s to 14s
+
+                heart.style.left = `${startLeft}vw`;
+                heart.style.fontSize = `${size}rem`;
+                heart.style.animationDuration = `${duration}s`;
+                
+                // Color variations
+                const colors = ['#b8956e', '#d4af37', '#e6c280', '#eebd71', '#ffb6c1', '#db7093'];
+                heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+                
+                // Randomly change opacity
+                heart.style.opacity = Math.random() * 0.5 + 0.3;
+
+                document.body.appendChild(heart);
+
+                // Remove heart after animation finishes
+                setTimeout(() => {
+                    heart.remove();
+                }, duration * 1000);
+            };
+
+            // Generate initial hearts
+            for(let i=0; i<15; i++) {
+                setTimeout(createHeart, Math.random() * 5000);
+            }
+
+            // Continuously generate new hearts
+            setInterval(createHeart, 800);
+        });
+    </script>
 </body>
 
 </html>
