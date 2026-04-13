@@ -170,24 +170,55 @@
                 <div class="h-[1px] w-16 bg-wedding-gold/40"></div>
             </div>
 
-            <!-- Nút bấm chuyển đến Link Google Photos -->
-            <div class="mt-8 animate-fade-in-up delay-200">
-                <a href="https://photos.app.goo.gl/wyLGThefGtyHpyrw5" target="_blank" rel="noopener noreferrer"
-                    class="group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-wedding-gold text-white rounded-full overflow-hidden transition-all duration-300 hover:bg-wedding-gold-dark hover:-translate-y-1 hover:shadow-xl shadow-md">
-                    <!-- Hiệu ứng bóng sáng lướt qua khi hover -->
-                    <span
-                        class="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-black transition-all duration-300"></span>
-
+            <!-- Nút bấm chuyển đến Link Google Photos & Video -->
+            <div class="mt-8 animate-fade-in-up delay-200 grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                <!-- Nút Hình Vu Quy -->
+                <a href="https://photos.app.goo.gl/3aCdeRXGupmnfmaT8" target="_blank" rel="noopener noreferrer"
+                    class="group relative inline-flex items-center justify-center gap-3 px-6 py-4 bg-wedding-gold text-white rounded-xl overflow-hidden transition-all duration-300 hover:bg-wedding-gold-dark hover:-translate-y-1 hover:shadow-xl shadow-md cursor-pointer">
+                    <span class="absolute inset-0 w-full h-full -mt-1 rounded-xl opacity-30 bg-gradient-to-b from-transparent via-transparent to-black transition-all duration-300"></span>
                     <i class="fa-brands fa-google text-xl relative z-10 group-hover:scale-110 transition-transform"></i>
                     <span class="font-heading font-semibold text-lg tracking-wider uppercase relative z-10">
-                        Album đầu tiệc
+                        Hình Vu Quy
                     </span>
                     <i class="fa-solid fa-arrow-right relative z-10 group-hover:translate-x-1 transition-transform"></i>
                 </a>
-                <p class="text-sm text-stone-400 mt-4 italic font-body">Nhấn vào nút bên trên để mở Google Photos</p>
-                <p class="text-[15px] font-medium text-wedding-gold mt-6 italic bg-wedding-gold/10 inline-block px-4 py-2 rounded-lg border border-wedding-gold/20 shadow-sm animate-pulse-slow">
-                    <i class="fa-solid fa-camera-retro mr-2"></i> Hình ảnh sẽ tiếp tục được cập nhật sau khi hậu kỳ hoàn tất
-                </p>
+
+                <!-- Nút Hình Đám Cưới 1 -->
+                <a href="https://photos.app.goo.gl/wyLGThefGtyHpyrw5" target="_blank" rel="noopener noreferrer"
+                    class="group relative inline-flex items-center justify-center gap-3 px-6 py-4 bg-wedding-gold text-white rounded-xl overflow-hidden transition-all duration-300 hover:bg-wedding-gold-dark hover:-translate-y-1 hover:shadow-xl shadow-md cursor-pointer">
+                    <span class="absolute inset-0 w-full h-full -mt-1 rounded-xl opacity-30 bg-gradient-to-b from-transparent via-transparent to-black transition-all duration-300"></span>
+                    <i class="fa-brands fa-google text-xl relative z-10 group-hover:scale-110 transition-transform"></i>
+                    <span class="font-heading font-semibold text-lg tracking-wider uppercase relative z-10">
+                        Hình Đám Cưới 1
+                    </span>
+                    <i class="fa-solid fa-arrow-right relative z-10 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+
+                <!-- Nút Hình Đám Cưới 2 -->
+                <a href="https://photos.app.goo.gl/UrJo4LJUpQ57E16S9" target="_blank" rel="noopener noreferrer"
+                    class="group relative inline-flex items-center justify-center gap-3 px-6 py-4 bg-wedding-gold text-white rounded-xl overflow-hidden transition-all duration-300 hover:bg-wedding-gold-dark hover:-translate-y-1 hover:shadow-xl shadow-md cursor-pointer">
+                    <span class="absolute inset-0 w-full h-full -mt-1 rounded-xl opacity-30 bg-gradient-to-b from-transparent via-transparent to-black transition-all duration-300"></span>
+                    <i class="fa-brands fa-google text-xl relative z-10 group-hover:scale-110 transition-transform"></i>
+                    <span class="font-heading font-semibold text-lg tracking-wider uppercase relative z-10">
+                        Hình Đám Cưới 2
+                    </span>
+                    <i class="fa-solid fa-arrow-right relative z-10 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+
+                <!-- Nút Video Cưới -->
+                <a href="https://youtu.be/2Igl2otVvdc?si=0mSrqpgZ8JzsD7ED" target="_blank" rel="noopener noreferrer"
+                    class="group relative inline-flex items-center justify-center gap-3 px-6 py-4 bg-stone-800 text-white rounded-xl overflow-hidden transition-all duration-300 hover:bg-stone-900 hover:-translate-y-1 hover:shadow-xl shadow-md cursor-pointer">
+                    <span class="absolute inset-0 w-full h-full -mt-1 rounded-xl opacity-30 bg-gradient-to-b from-transparent via-transparent to-black transition-all duration-300"></span>
+                    <i class="fa-brands fa-youtube text-xl text-red-500 relative z-10 group-hover:scale-110 transition-transform"></i>
+                    <span class="font-heading font-semibold text-lg tracking-wider uppercase relative z-10">
+                        Video Cưới
+                    </span>
+                    <i class="fa-solid fa-arrow-right relative z-10 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+            
+            <div class="mt-6 flex flex-col items-center">
+                <p class="text-sm text-stone-400 italic font-body">Nhấn vào nút bên trên để xem Google Photos và Youtube</p>
             </div>
 
         </div>
